@@ -3,12 +3,12 @@ import 'package:ascii/constants.dart';
 import 'package:image/image.dart';
 
 main() {
-  Image importedImage = decodeImage(File('test.jpg').readAsBytesSync());
+  Image importedImage = decodeImage(File('test.jpg ').readAsBytesSync());
   int finalImageWidth = 65;
   int finalImageHeight =
-      ((importedImage.height * (finalImageWidth / importedImage.width)) / 2)
+      (((importedImage.height * (finalImageWidth / importedImage.width))) /3)
           .round();
-  Image image = copyResize(contrast(brightness(importedImage, 135), 116),
+  Image image = copyResize(contrast(brightness(importedImage, 105), 115),
       width: finalImageWidth, height: finalImageHeight);
   int height = image.height;
   int width = image.width;
